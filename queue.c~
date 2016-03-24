@@ -18,12 +18,12 @@ seqNum dequeue(queue *q){
   return s;
 }
 
-void enqueue(seqNum s, int arrivalTime, queue *q){
+void enqueue(seqNum s, int arrival, queue *q){
   customer *p;
   
   p = malloc(sizeof(customer));
   p -> s = s;
-  p -> arrivalTime = arrivalTime;
+  p -> arrivalTime = arrival;
   p -> next = NULL;
   if(!empty(q)){
     q -> rear -> next = p;

@@ -6,20 +6,16 @@
 #define FULL 1920
 
 typedef int seqNum;
-typedef int arrivTime;
-typedef int departTime;
-typedef int timeSpent;
 typedef enum {false, true} boolean;
 
 struct customer{
   seqNum s;
-  arrivTime aT;
-  departTime dT;
-  timeSpent tS;
+  int arrivalTime;
   struct customer *next;
 };
 
 typedef struct customer customer;
+
 struct queue {
   int cnt;	// count of elements
   customer *front;
@@ -28,7 +24,7 @@ struct queue {
 
 typedef struct queue queue;
 void initialize(queue *q);
-void enqueue(seqNum s, queue *q);
+void enqueue(seqNum s, int arrivalTime, queue *q);
 seqNum dequeue(queue *q);
 seqNum front(const queue *q);
 boolean empty(const queue *q);
