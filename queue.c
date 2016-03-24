@@ -34,6 +34,10 @@ void enqueue(seqNum s, int arrivalTime, queue *q){
   q -> cnt++;
 }
 
+int queueSize(queue *q){
+  return q -> cnt;
+}
+
 seqNum front(const queue *q){
   return (q -> front -> s);
 }

@@ -29,4 +29,5 @@ seqNum dequeue(queue *q);
 seqNum front(const queue *q);
 boolean empty(const queue *q);
 boolean full(const queue *q);
+int queueSize(queue *q);
   
